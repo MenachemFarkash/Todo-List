@@ -8,18 +8,41 @@ class Main extends Component {
     style = {
         display: 'flex',
         alignItems: 'center',
+        flexFlow: 'column',
         justifyContent: 'center',
         height: '97vh',
+        wordWrap: 'break-word',
 
         container: {
-            backgroundColor: 'gray',
+            backgroundColor: '#EDEDED',
             width: 450,
             height: 550,
             border: '2px solid black',
             fontSize: '30px',
+            borderRadius: '7px',
+            boxShadow: '5px 5px 10px rgb(157, 158, 150)',
         },
+
         taskList: {
             height: '550px',
+            paddingTop: '10px',
+            paddingLeft: '10px',
+            paddingRight: '10px',
+            textAlign: 'center',
+        },
+
+        taskNameInput: {
+            width: '80%',
+            height: '45px',
+            fontSize: '30px',
+            borderRadius: '7px',
+        },
+        button: {
+            width: '18%',
+            fontSize: '30px',
+            border: 'none',
+            backgroundColor: '#FF8787',
+            borderRadius: '7px',
         },
     };
     render() {
@@ -39,24 +62,27 @@ class Main extends Component {
                             })}
                         </div>
                     </div>
-                    <div>
-                        <input
-                            id="taskNameInput"
-                            style={{
-                                width: '80%',
-                                height: '50px',
-                                marginTop: '20px',
-                                fontSize: '30px',
-                            }}
-                            type="text"
-                        />
-                        <button
-                            onClick={() => this.handleAddTask()}
-                            style={{ width: '18%', height: '50px', fontSize: '30px' }}
-                        >
-                            Add
-                        </button>
-                    </div>
+                </div>
+                <div
+                    style={{
+                        display: 'flex',
+                        flexFlow: 'row',
+                        marginTop: '15px',
+                        boxShadow: '5px 5px 10px rgb(157, 158, 150)',
+                        borderRadius: '7px',
+                    }}
+                >
+                    <input
+                        id="taskNameInput"
+                        style={this.style.taskNameInput}
+                        type="text"
+                    />
+                    <button
+                        onClick={() => this.handleAddTask()}
+                        style={this.style.button}
+                    >
+                        Add
+                    </button>
                 </div>
             </div>
         );
