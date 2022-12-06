@@ -79,17 +79,7 @@ class Main extends Component {
                         </div>
                     </div>
                 </div>
-                <div
-                    style={{
-                        display: 'flex',
-                        flexFlow: 'row',
-                        justifyContent: 'space-between',
-                        marginTop: '15px',
-                        boxShadow: '5px 5px 10px rgb(157, 158, 150)',
-                        borderRadius: '7px',
-                        width: 450,
-                    }}
-                >
+                <div style={this.style.bottom}>
                     <input
                         id="taskNameInput"
                         style={this.style.taskNameInput}
