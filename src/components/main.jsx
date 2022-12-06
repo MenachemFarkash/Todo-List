@@ -94,6 +94,7 @@ class Main extends Component {
                 name: document.getElementById('taskNameInput').value,
             });
         this.setState({ tasks: this.state.tasks });
+        document.getElementById('taskNameInput').value = '';
     }
     disable(event) {
         event.target.disabled = true;
