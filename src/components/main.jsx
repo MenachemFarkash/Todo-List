@@ -28,7 +28,7 @@ class Main extends Component {
             paddingTop: '10px',
             paddingLeft: '10px',
             paddingRight: '10px',
-            textAlign: 'center',
+            verticalAlign: 'center',
         },
 
         taskNameInput: {
@@ -36,6 +36,7 @@ class Main extends Component {
             height: '45px',
             fontSize: '30px',
             borderRadius: '7px',
+            border: '2px solid black',
         },
         button: {
             width: '18%',
@@ -43,11 +44,26 @@ class Main extends Component {
             border: 'none',
             backgroundColor: '#FF8787',
             borderRadius: '7px',
+            border: '2px solid black',
+        },
+        bottom: {
+            display: 'flex',
+            flexFlow: 'row',
+            justifyContent: 'space-between',
+            marginTop: '15px',
+            boxShadow: '5px 5px 10px rgb(157, 158, 150)',
+            borderRadius: '7px',
+            width: 450,
+        },
+        h1: {
+            fontSize: '70px',
+            marginBottom: '0px',
         },
     };
     render() {
         return (
             <div style={this.style}>
+                <h1 style={this.style.h1}>To Do List:</h1>
                 <div style={this.style.container}>
                     <div>
                         <div style={this.style.taskList}>
@@ -67,15 +83,18 @@ class Main extends Component {
                     style={{
                         display: 'flex',
                         flexFlow: 'row',
+                        justifyContent: 'space-between',
                         marginTop: '15px',
                         boxShadow: '5px 5px 10px rgb(157, 158, 150)',
                         borderRadius: '7px',
+                        width: 450,
                     }}
                 >
                     <input
                         id="taskNameInput"
                         style={this.style.taskNameInput}
                         type="text"
+                        placeholder="Please Write Task Name"
                     />
                     <button
                         onClick={() => this.handleAddTask()}
